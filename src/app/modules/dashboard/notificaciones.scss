@@ -17,7 +17,7 @@
 
 .notification-card .icon {
   font-size: 22px;
-  color: #008000;
+  color: #008000;       
 }
 
 .notification-card .content {
@@ -36,9 +36,11 @@
   color: #666;
 }
 
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
   .notification-card {
     background: #2a2a2a;
+    box-shadow: 0 2px 6px rgba(255,255,255,0.1);
   }
   .notification-card .content h4 {
     color: #eee;
@@ -48,7 +50,7 @@
   }
 }
 
-
+/* Ajustes móviles */
 @media (max-width: 480px) {
   .notifications {
     padding: 0.8rem;
@@ -66,6 +68,7 @@
 
   .notification-card .content h4 {
     font-size: 14px;
+    margin-bottom: 0.3rem;
   }
 
   .notification-card .content p {

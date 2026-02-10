@@ -1,80 +1,79 @@
 .bottom-nav {
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
   display: flex;
   background: #ffffff;
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
   padding: 0.6rem 0;
+  z-index: 1000; 
 }
 
 .bottom-nav a {
-  flex: 1; /* cada ítem ocupa mismo ancho */
+  flex: 1; 
   text-decoration: none;
-  color: #006699; /* azul institucional más visible */
+  color: #006699; 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* centra ícono + texto */
-  padding: 0.4rem 0; /* relleno vertical */
-  transition: color 0.3s ease, transform 0.2s ease; /* animación suave */
+  justify-content: center; 
+  padding: 0.4rem 0; 
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .bottom-nav a:active {
-  transform: scale(0.9); /* efecto de “tap” */
+  transform: scale(0.9); 
 }
 
 .bottom-nav a .material-symbols-outlined {
-  font-size: 32px; /* tamaño base ícono */
+  font-size: 32px; 
   margin-bottom: 4px;
 }
 
 .bottom-nav a .label {
-  font-size: 13px; /* tamaño base texto */
+  font-size: 13px; 
   line-height: 1.2;
 }
 
 .bottom-nav a.active {
-  color: #008000; /* verde institucional para activo */
+  color: #008000; 
   font-weight: 600;
   position: relative;
 }
 
-/* círculo suave detrás del ícono activo */
 .bottom-nav a.active .material-symbols-outlined {
   background: rgba(0, 128, 0, 0.1);
   border-radius: 50%;
   padding: 6px;
 }
 
-/* barra superior como indicador activo */
 .bottom-nav a.active::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: -10px;
   width: 40%;
   height: 3px;
   background: #008000;
   border-radius: 2px;
 }
 
-/* 🌙 modo oscuro con íconos en blanco */
 @media (prefers-color-scheme: dark) {
   .bottom-nav {
     background: #1c1c1c;
     box-shadow: 0 -1px 4px rgba(255, 255, 255, 0.1);
   }
   .bottom-nav a {
-    color: #ffffff; /* texto en blanco */
+    color: #ffffff;
   }
   .bottom-nav a .material-symbols-outlined {
-    color: #ffffff; /* íconos en blanco */
+    color: #ffffff;
   }
   .bottom-nav a.active {
-    color: #00ff99; /* verde neón para resaltar activo */
+    color: #00ff99;
   }
   .bottom-nav a.active .material-symbols-outlined {
-    color: #00ff99; /* ícono activo en verde neón */
+    color: #00ff99;
     background: rgba(0, 255, 153, 0.1);
   }
   .bottom-nav a.active::before {
@@ -82,15 +81,15 @@
   }
 }
 
-/* Ajustes específicos para celulares */
 @media (max-width: 480px) {
   .bottom-nav {
-    padding: 0.4rem 0; /* menos padding para pantallas pequeñas */
+    padding: 0.4rem 0;
+    height: 50px; 
   }
   .bottom-nav a .material-symbols-outlined {
-    font-size: 28px; /* ícono más cómodo en móviles */
+    font-size: 28px;
   }
   .bottom-nav a .label {
-    font-size: 12px; /* texto más legible en móviles */
+    font-size: 12px;
   }
 }

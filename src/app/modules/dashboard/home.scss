@@ -7,8 +7,9 @@
 .dashboard-title {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 1rem;
   color: #008000;
+  margin-top: 0.8rem;     
+  margin-bottom: 0.6rem;  
 }
 
 .task-card {
@@ -37,6 +38,7 @@
 .status.in-progress { color: #ff9900; }
 .status.done { color: #008000; }
 
+
 @media (prefers-color-scheme: dark) {
   .task-card {
     background: #2a2a2a;
@@ -47,6 +49,7 @@
   }
 }
 
+/* Ajustes móviles */
 @media (max-width: 480px) {
   .dashboard {
     padding: 0.8rem;
@@ -54,7 +57,8 @@
 
   .dashboard-title {
     font-size: 16px;
-    margin-bottom: 0.8rem;
+    margin-top: 0.6rem;   
+    margin-bottom: 0.5rem;
   }
 
   .task-card {
@@ -65,6 +69,7 @@
 
   .task-card h3 {
     font-size: 15px;
+    margin-top: 0.3rem;   
     margin-bottom: 0.5rem;
   }
 
