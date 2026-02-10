@@ -3,6 +3,8 @@
   min-height: 100vh;
   padding-top: 60px; 
   padding-bottom: 70px; 
+  max-width: 1200px;   
+  margin: 0 auto;      
 }
 
 .dashboard-module h2 {
@@ -12,12 +14,25 @@
   color: #008000;
 }
 
-
 @media (prefers-color-scheme: dark) {
   .dashboard-module {
     background: #121212;
   }
   .dashboard-module h2 {
     color: #00ff99;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-module {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .dashboard-module h2 {
+    font-size: 18px;
+    margin: 0.8rem;
   }
 }

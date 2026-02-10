@@ -1,5 +1,7 @@
 .notifications {
   padding: 1rem;
+  max-width: 1200px;   
+  margin: 0 auto;      
 }
 
 .notification-card {
@@ -34,7 +36,6 @@
   color: #666;
 }
 
-
 @media (prefers-color-scheme: dark) {
   .notification-card {
     background: #2a2a2a;
@@ -44,5 +45,30 @@
   }
   .notification-card .content p {
     color: #aaa;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .notifications {
+    padding: 0.8rem;
+  }
+
+  .notification-card {
+    flex-direction: column;   
+    gap: 0.5rem;
+    padding: 0.7rem;
+  }
+
+  .notification-card .icon {
+    font-size: 20px;
+  }
+
+  .notification-card .content h4 {
+    font-size: 14px;
+  }
+
+  .notification-card .content p {
+    font-size: 12px;
   }
 }
