@@ -1,0 +1,96 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.6rem 0;
+}
+
+.bottom-nav a {
+  flex: 1; /* cada ítem ocupa mismo ancho */
+  text-decoration: none;
+  color: #006699; /* azul institucional más visible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* centra ícono + texto */
+  padding: 0.4rem 0; /* relleno vertical */
+  transition: color 0.3s ease, transform 0.2s ease; /* animación suave */
+}
+
+.bottom-nav a:active {
+  transform: scale(0.9); /* efecto de “tap” */
+}
+
+.bottom-nav a .material-symbols-outlined {
+  font-size: 32px; /* tamaño base ícono */
+  margin-bottom: 4px;
+}
+
+.bottom-nav a .label {
+  font-size: 13px; /* tamaño base texto */
+  line-height: 1.2;
+}
+
+.bottom-nav a.active {
+  color: #008000; /* verde institucional para activo */
+  font-weight: 600;
+  position: relative;
+}
+
+/* círculo suave detrás del ícono activo */
+.bottom-nav a.active .material-symbols-outlined {
+  background: rgba(0, 128, 0, 0.1);
+  border-radius: 50%;
+  padding: 6px;
+}
+
+/* barra superior como indicador activo */
+.bottom-nav a.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 40%;
+  height: 3px;
+  background: #008000;
+  border-radius: 2px;
+}
+
+/* 🌙 modo oscuro con íconos en blanco */
+@media (prefers-color-scheme: dark) {
+  .bottom-nav {
+    background: #1c1c1c;
+    box-shadow: 0 -1px 4px rgba(255, 255, 255, 0.1);
+  }
+  .bottom-nav a {
+    color: #ffffff; /* texto en blanco */
+  }
+  .bottom-nav a .material-symbols-outlined {
+    color: #ffffff; /* íconos en blanco */
+  }
+  .bottom-nav a.active {
+    color: #00ff99; /* verde neón para resaltar activo */
+  }
+  .bottom-nav a.active .material-symbols-outlined {
+    color: #00ff99; /* ícono activo en verde neón */
+    background: rgba(0, 255, 153, 0.1);
+  }
+  .bottom-nav a.active::before {
+    background: #00ff99;
+  }
+}
+
+/* Ajustes específicos para celulares */
+@media (max-width: 480px) {
+  .bottom-nav {
+    padding: 0.4rem 0; /* menos padding para pantallas pequeñas */
+  }
+  .bottom-nav a .material-symbols-outlined {
+    font-size: 28px; /* ícono más cómodo en móviles */
+  }
+  .bottom-nav a .label {
+    font-size: 12px; /* texto más legible en móviles */
+  }
+}

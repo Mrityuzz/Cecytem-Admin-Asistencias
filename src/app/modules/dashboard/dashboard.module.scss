@@ -1,0 +1,23 @@
+.dashboard-module {
+  background: #f9f9f9;
+  min-height: 100vh;
+  padding-top: 60px; 
+  padding-bottom: 70px; 
+}
+
+.dashboard-module h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 1rem;
+  color: #008000;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .dashboard-module {
+    background: #121212;
+  }
+  .dashboard-module h2 {
+    color: #00ff99;
+  }
+}

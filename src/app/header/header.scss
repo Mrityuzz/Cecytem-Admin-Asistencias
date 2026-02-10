@@ -1,0 +1,66 @@
+.app-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff; 
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.6rem 0.8rem; 
+  z-index: 1000;
+}
+
+.app-header .logo img {
+  height: 32px; 
+}
+
+.app-header .actions {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem; 
+}
+
+.app-header .actions .header-icon {
+  color: #444;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.app-header .actions .header-icon .material-symbols-outlined {
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.app-header .actions .header-icon:active .material-symbols-outlined {
+  transform: scale(0.9);
+  color: #008000; 
+}
+
+@media (prefers-color-scheme: dark) {
+  .app-header {
+    background: #1c1c1c;
+    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1);
+  }
+  .app-header .actions .header-icon .material-symbols-outlined {
+    color: #ccc;
+  }
+  .app-header .actions .header-icon:active .material-symbols-outlined {
+    color: #00ff99;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    height: 50px;
+    padding: 0.4rem 0.5rem;
+  }
+  .app-header .logo img {
+    height: 26px; 
+  }
+  .app-header .actions .header-icon .material-symbols-outlined {
+    font-size: 24px;
+  }
+}

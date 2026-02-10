@@ -1,0 +1,47 @@
+.dashboard {
+  padding: 1rem;
+}
+
+.dashboard-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #008000; /* verde institucional */
+}
+
+.task-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-card h3 {
+  font-size: 16px;
+  margin: 0;
+  color: #444;
+}
+
+.status {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status.pending { color: #ff4444; }
+.status.in-progress { color: #ff9900; }
+.status.done { color: #008000; }
+
+/* 🌙 Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  .task-card {
+    background: #2a2a2a;
+    box-shadow: 0 2px 6px rgba(255,255,255,0.1);
+  }
+  .task-card h3 {
+    color: #eee;
+  }
+}

@@ -1,0 +1,7 @@
+<h2>Historial de Reportes</h2>
+<ul>
+  <li *ngFor="let registro of historial">
+    {{ registro.tipo }} - {{ registro.persona }} - {{ registro.fecha }}
+    <span *ngIf="registro.detalle"> | {{ registro.detalle }}</span>
+  </li>
+</ul>

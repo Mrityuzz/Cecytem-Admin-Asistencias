@@ -1,0 +1,9 @@
+<div class="actividades-lista">
+  <h2>Lista de Actividades</h2>
+  <ul>
+    <li *ngFor="let actividad of actividades">
+      <strong>{{ actividad.nombre }}</strong> - {{ actividad.fecha }}
+      <button (click)="verDetalle(actividad.id)">Ver detalle</button>
+    </li>
+  </ul>
+</div>

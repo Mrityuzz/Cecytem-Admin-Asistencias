@@ -1,0 +1,13 @@
+<h2>Reportes Administrativos Globales</h2>
+<table>
+  <tr>
+    <th>Área</th>
+    <th>Accesos</th>
+    <th>Ausencias</th>
+  </tr>
+  <tr *ngFor="let reporte of reportes">
+    <td>{{ reporte.area }}</td>
+    <td>{{ reporte.accesos }}</td>
+    <td>{{ reporte.ausencias }}</td>
+  </tr>
+</table>

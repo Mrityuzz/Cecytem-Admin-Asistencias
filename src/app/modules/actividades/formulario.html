@@ -1,0 +1,23 @@
+<form (ngSubmit)="guardarActividad()">
+  <label>Nombre:</label>
+  <input [(ngModel)]="actividad.nombre" name="nombre" required />
+
+  <label>Descripción:</label>
+  <textarea [(ngModel)]="actividad.descripcion" name="descripcion"></textarea>
+
+  <label>Fecha:</label>
+  <input type="date" [(ngModel)]="actividad.fecha" name="fecha" required />
+
+  <label>Lugar:</label>
+  <input [(ngModel)]="actividad.lugar" name="lugar" />
+
+  <label>Estado:</label>
+  <select [(ngModel)]="actividad.estado" name="estado">
+    <option>Pendiente</option>
+    <option>En curso</option>
+    <option>Finalizada</option>
+    <option>Cancelada</option>
+  </select>
+
+  <button type="submit">Guardar</button>
+</form>
