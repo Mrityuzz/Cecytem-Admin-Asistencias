@@ -16,10 +16,19 @@
   height: 32px; 
 }
 
+.module-title {
+  flex: 1;               
+  text-align: center;    
+  font-size: 18px;
+  font-weight: 600;
+  color: #008000;
+  margin: 0;
+}
+
 .app-header .actions {
   display: flex;
   align-items: center;
-  margin-right: 0.5rem; 
+  margin-left: auto;
 }
 
 .app-header .actions .header-icon {
@@ -44,6 +53,9 @@
   .app-header {
     background: #1c1c1c;
     box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1);
+  }
+  .module-title {
+    color: #00ff99;
   }
   .app-header .actions .header-icon .material-symbols-outlined {
     color: #ccc;
@@ -106,6 +118,9 @@
   }
   .app-header .logo img {
     height: 26px; 
+  }
+  .module-title {
+    font-size: 16px;   
   }
   .app-header .actions .header-icon .material-symbols-outlined {
     font-size: 24px;
