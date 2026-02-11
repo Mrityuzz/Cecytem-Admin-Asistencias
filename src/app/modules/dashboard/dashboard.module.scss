@@ -14,7 +14,6 @@
   color: #008000;
 }
 
-/* Dark mode */
 @media (prefers-color-scheme: dark) {
   .dashboard-module {
     background: #121212;
@@ -24,7 +23,6 @@
   }
 }
 
-/* Ajustes móviles */
 @media (max-width: 480px) {
   .dashboard-module {
     padding-top: 50px;    

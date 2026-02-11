@@ -1,9 +1,12 @@
+<!-- Header dinámico -->
 <app-header [tituloModulo]="tituloModulo"></app-header>
 
+<!-- Contenido principal -->
 <main class="content">
   <router-outlet></router-outlet>
 </main>
 
+<!-- Barra de navegación inferior -->
 <nav class="bottom-nav" id="bottomNav">
   <a routerLink="/dashboard/home" routerLinkActive="active">
     <span class="material-symbols-outlined">business_center</span>
@@ -26,4 +29,3 @@
     <span class="label">Cuenta</span>
   </a>
 </nav>
- 

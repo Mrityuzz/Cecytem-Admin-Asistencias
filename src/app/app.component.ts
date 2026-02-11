@@ -16,7 +16,8 @@ export class AppComponent {
   constructor(private router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        if (event.url.includes('dashboard')) this.tituloModulo = 'Dashboard Administrativo';
+        if (event.url.includes('/dashboard/home')) this.tituloModulo = 'Dashboard Administrativo';
+        else if (event.url.includes('/dashboard/notificaciones')) this.tituloModulo = 'Notificaciones';
         else if (event.url.includes('actividades')) this.tituloModulo = 'Actividades';
         else if (event.url.includes('asistencia')) this.tituloModulo = 'Asistencia';
         else if (event.url.includes('reportes')) this.tituloModulo = 'Reportes';

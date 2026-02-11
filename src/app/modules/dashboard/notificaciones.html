@@ -1,10 +1,12 @@
-<section class="notificaciones">
-  <h2>Notificaciones Internas</h2>
+<section class="notifications">
   <p class="info">✅ Estás en la pantalla de Notificaciones</p>
+  <br>
 
-  <ul>
-    <li *ngFor="let notificacion of notificaciones">
-      {{ notificacion.mensaje }}
-    </li>
-  </ul>
+  <div class="notification-card" *ngFor="let notificacion of notificaciones">
+    <span class="material-symbols-outlined icon">notifications</span>
+    <div class="content">
+      <h4>{{ notificacion.mensaje }}</h4>
+      <p>Detalle o descripción breve de la notificación.</p>
+    </div>
+  </div>
 </section>

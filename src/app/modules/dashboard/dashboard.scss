@@ -39,7 +39,6 @@
 .status.in-progress { color: #ff9900; }
 .status.done { color: #008000; }
 
-/* Dark mode */
 @media (prefers-color-scheme: dark) {
   .task-card {
     background: #2a2a2a;
