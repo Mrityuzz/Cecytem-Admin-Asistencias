@@ -1,0 +1,161 @@
+.actividades-lista {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+}
+
+/* Mensaje de info */
+.info {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #008000; 
+}
+
+/* Botón flotante Nueva Actividad */
+.tab-circle {
+  position: fixed;          
+  bottom: 4.5rem;           
+  right: 1.5rem;            
+  width: 50px;              
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #f37021;      
+  color: #fff;
+  font-size: 26px;          
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25); 
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 100;             
+}
+
+.tab-circle:hover {
+  background: #cc5c1a;      
+  transform: scale(1.1);
+}
+
+/* Tarjetas de actividades */
+.actividad-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.actividad-card:hover {
+  transform: translateY(-3px);
+}
+
+.icon {
+  font-size: 26px;
+  color: #f37021;
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+}
+
+.content h4 {
+  font-size: 17px;
+  margin: 0 0 0.4rem;
+  color: #008000;
+}
+
+.fecha {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 0.6rem;
+}
+
+.detalle-btn {
+  background: #f37021;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.detalle-btn:hover {
+  background: #cc5c1a;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .actividad-card {
+    background: #2a2a2a;
+    box-shadow: 0 2px 6px rgba(255,255,255,0.1);
+  }
+  .content h4 {
+    color: #90ee90;
+  }
+  .fecha {
+    color: #aaa;
+  }
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .actividades-lista {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .tab-circle {
+    width: 45px;
+    height: 45px;
+    font-size: 28px;
+    bottom: 4rem;           
+    right: 1rem;
+  }
+
+  .actividad-card {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  .icon {
+    font-size: 22px;
+  }
+
+  .content h4 {
+    font-size: 15px;
+  }
+
+  .fecha {
+    font-size: 13px;
+  }
+
+  .detalle-btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .actividades-lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .actividades-lista {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}

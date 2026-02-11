@@ -1,7 +1,15 @@
-<div class="actividad-detalle" *ngIf="actividad">
-  <h2>{{ actividad.nombre }}</h2>
-  <p><strong>Descripción:</strong> {{ actividad.descripcion }}</p>
-  <p><strong>Fecha:</strong> {{ actividad.fecha }}</p>
-  <p><strong>Lugar:</strong> {{ actividad.lugar }}</p>
-  <p><strong>Estado:</strong> {{ actividad.estado }}</p>
-</div>
+<section class="actividad-detalle" *ngIf="actividad">
+  <br>
+  <div class="detalle-card">
+    <span class="material-symbols-outlined icon">assignment</span>
+    <div class="content">
+      <h2>{{ actividad.nombre }}</h2>
+      <p><strong>Descripción:</strong> {{ actividad.descripcion }}</p>
+      <p><strong>Fecha:</strong> {{ actividad.fecha }}</p>
+      <p><strong>Lugar:</strong> {{ actividad.lugar }}</p>
+      <p><strong>Estado:</strong> 
+        <span class="estado" [ngClass]="actividad.estado">{{ actividad.estado }}</span>
+      </p>
+    </div>
+  </div>
+</section>

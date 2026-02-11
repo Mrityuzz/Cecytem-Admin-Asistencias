@@ -23,4 +23,8 @@ export class ListaComponent implements OnInit {
   verDetalle(id: number) {
     this.router.navigate(['/actividades/detalle', id]);
   }
+
+  irFormulario() {
+    this.router.navigate(['/actividades/formulario']); 
+  }
 }
